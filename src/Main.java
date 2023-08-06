@@ -45,7 +45,15 @@ public class Main {
 
     private static void task3() {
         System.out.println("Задача 3");
-        int [] arr = generateRandomArray();
+        int sum = 0;
+        float averageValue = 0;
+        int[] arr = generateRandomArray();
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        averageValue = sum / 30;
+        System.out.println("Средняя сумма трат за месяц составила: " + averageValue + " рублей");
+        System.out.println();
     }
 
     private static void task4() {
