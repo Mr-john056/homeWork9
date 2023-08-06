@@ -23,11 +23,24 @@ public class Main {
             sum += arr[i];
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
+        System.out.println();
     }
 
     private static void task2() {
         System.out.println("Задача 2");
         int [] arr = generateRandomArray();
+        int minSum = arr[0];
+        int maxSum = arr[0];
+        for (int i= 0; i < arr.length; i++){
+            if (arr[i] < minSum){
+                minSum = arr[i];
+            }
+            if (arr[i] > maxSum){
+                maxSum = arr[i];
+            }
+        }
+        System.out.println("Минимальная сумма за день равна: " + minSum);
+        System.out.println("Максимальная сумма за день равна: " + maxSum);
     }
 
     private static void task3() {
